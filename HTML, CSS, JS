@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+
+<script src="https://www.dropbox.com/s/9la4epu404k0k3n/jquery.js?raw=1"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+body {
+  /*font-family: 'Oswald', sans-serif;*/
+    font-family: Century Gothic;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #3C7868;
+  color: #FFFAEE; 
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-size: 75px;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+ 
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://vignette4.wikia.nocookie.net/bioshock/images/f/f9/Electro_Bolt_Slide_4.png");
+}
+.second{
+  background-image: url("https://vignette3.wikia.nocookie.net/bioshock/images/3/35/Incinerate%21_Slide_3.png");
+}
+.third{
+  background-image: url("https://vignette4.wikia.nocookie.net/bioshock/images/1/17/Telekinesis_Slide_3.png");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+  div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Ryan's Industries</h1>
+<h2>a Rapture conglomerate </h2>
+<div class="first">
+  <p>Electro Bolt<span class="price">96 EVE</span><br />
+  <small>Stun your foes with a thousand volts. Shock them in water to deal damage. Don't be a dolt -- use Electro Bolt! <br />EVOLVE TODAY! </small> </p>
+</div>
+
+<div class="second">
+  <p>Incinerate!<span class="price">48 EVE</span><br />
+  <small>Light up enemies to a thousand degrees! Incineration: when it absolutely positively has to erupt in flames, don't wait -- Incinerate! <br />EVOLVE TODAY! </small> </p>
+</div>
+  
+<div class="third">
+  <p>Telekinesis<span class="price">15 EVE</span><br />
+  <small>Pick up big stuff with your mind. Throw them at your enemies. What else do you need to know? <br />EVOLVE TODAY! </small></p>
+</div>
+
+<img src="https://www.dropbox.com/s/ojt87jyssfazltx/bioshockLogo.png?raw=1" style="margin: 0 auto;" >
+<script>
+
+  $("div").on("click", function() {
+      $(this).toggleClass("show-description");
+  });
+</script>
+</body>
